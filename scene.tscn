@@ -1,0 +1,14 @@
+[gd_scene format=4 uid="uid://dvc40jvkj7647"]
+
+[ext_resource type="TileSet" uid="uid://xcac0t0u1q1v" path="res://sets/interactables.tres" id="2_3253y"]
+[ext_resource type="TileSet" uid="uid://bg7iqi3vcprg0" path="res://sets/tileset.tres" id="2_nxogm"]
+
+[node name="Node2D" type="Node2D" unique_id=173471357]
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=446895465]
+tile_map_data = PackedByteArray("AAAHAAIAAAABAAAAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAHAAQAAAABAAEAAAAIAAQAAAABAAEAAAAJAAMAAAACAAEAAAAIAAIAAAABAAAAAAAJAAQAAAACAAEAAAAIAAUAAAABAAIAAAAHAAUAAAABAAIAAAAGAAUAAAAAAAIAAAAJAAUAAAACAAIAAAAHAAYAAAAGAAMAAAAGAAYAAAAGAAIAAAAIAAYAAAAGAAMAAAAJAAYAAAAGAAEAAAAHAAMAAAABAAEAAAAIAAMAAAABAAEAAAAGAAIAAAAAAAAAAAAJAAIAAAACAAAAAAA=")
+tile_set = ExtResource("2_nxogm")
+
+[node name="Player" type="TileMapLayer" parent="." unique_id=89098380]
+tile_map_data = PackedByteArray("AAAHAAMAAAAAAAAAAAA=")
+tile_set = ExtResource("2_3253y")
