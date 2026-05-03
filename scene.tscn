@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://dvc40jvkj7647"]
 
-[ext_resource type="TileSet" uid="uid://xcac0t0u1q1v" path="res://sets/interactables.tres" id="2_3253y"]
+[ext_resource type="Texture2D" uid="uid://beiboox4oh0o4" path="res://art/pig.png" id="1_ulcgi"]
 [ext_resource type="TileSet" uid="uid://bg7iqi3vcprg0" path="res://sets/tileset.tres" id="2_nxogm"]
+[ext_resource type="Script" uid="uid://ck875har62r75" path="res://code/player.gd" id="3_3253y"]
 
 [node name="Node2D" type="Node2D" unique_id=173471357]
 
@@ -9,6 +10,12 @@
 tile_map_data = PackedByteArray("AAAHAAIAAAABAAAAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAHAAQAAAABAAEAAAAIAAQAAAABAAEAAAAJAAMAAAACAAEAAAAIAAIAAAABAAAAAAAJAAQAAAACAAEAAAAIAAUAAAABAAIAAAAHAAUAAAABAAIAAAAGAAUAAAAAAAIAAAAJAAUAAAACAAIAAAAHAAYAAAAGAAMAAAAGAAYAAAAGAAIAAAAIAAYAAAAGAAMAAAAJAAYAAAAGAAEAAAAHAAMAAAABAAEAAAAIAAMAAAABAAEAAAAGAAIAAAAAAAAAAAAJAAIAAAACAAAAAAA=")
 tile_set = ExtResource("2_nxogm")
 
-[node name="Player" type="TileMapLayer" parent="." unique_id=89098380]
-tile_map_data = PackedByteArray("AAAHAAMAAAAAAAAAAAA=")
-tile_set = ExtResource("2_3253y")
+[node name="PlayerController" type="Node" parent="." unique_id=781343774 node_paths=PackedStringArray("floor_layer", "sprite")]
+script = ExtResource("3_3253y")
+floor_layer = NodePath("../Floor")
+sprite = NodePath("Pig")
+metadata/_custom_type_script = "uid://ck875har62r75"
+
+[node name="Pig" type="Sprite2D" parent="PlayerController" unique_id=1160003425]
+position = Vector2(99, 52)
+texture = ExtResource("1_ulcgi")
