@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://beiboox4oh0o4" path="res://art/pig.png" id="1_ulcgi"]
 [ext_resource type="TileSet" uid="uid://bg7iqi3vcprg0" path="res://sets/tileset.tres" id="2_nxogm"]
 [ext_resource type="Script" uid="uid://ck875har62r75" path="res://code/player.gd" id="3_3253y"]
+[ext_resource type="TileSet" uid="uid://biecfibyms4a7" path="res://sets/line_set.tres" id="4_u3cyc"]
 
 [node name="Node2D" type="Node2D" unique_id=173471357]
 
@@ -10,9 +11,13 @@
 tile_map_data = PackedByteArray("AAAHAAIAAAABAAAAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAHAAQAAAABAAEAAAAIAAQAAAABAAEAAAAJAAMAAAACAAEAAAAIAAIAAAABAAAAAAAJAAQAAAACAAEAAAAIAAUAAAABAAIAAAAHAAUAAAABAAIAAAAGAAUAAAAAAAIAAAAJAAUAAAACAAIAAAAHAAYAAAAGAAMAAAAGAAYAAAAGAAIAAAAIAAYAAAAGAAMAAAAJAAYAAAAGAAEAAAAHAAMAAAABAAEAAAAIAAMAAAABAAEAAAAGAAIAAAAAAAAAAAAJAAIAAAACAAAAAAA=")
 tile_set = ExtResource("2_nxogm")
 
-[node name="PlayerController" type="Node" parent="." unique_id=781343774 node_paths=PackedStringArray("floor_layer", "sprite")]
+[node name="Lines" type="TileMapLayer" parent="." unique_id=1871790888]
+tile_set = ExtResource("4_u3cyc")
+
+[node name="PlayerController" type="Node" parent="." unique_id=781343774 node_paths=PackedStringArray("floor_layer", "lines_layer", "sprite")]
 script = ExtResource("3_3253y")
 floor_layer = NodePath("../Floor")
+lines_layer = NodePath("../Lines")
 sprite = NodePath("Pig")
 metadata/_custom_type_script = "uid://ck875har62r75"
 
